@@ -1,0 +1,112 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model PaymentModel
+<!DOCTYPE html>
+
+<html>
+
+<body>
+	@*    <div class="container d-flex flex-column justify-content-center">
+		<section class="main-page mt-5">*@
+	@*col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first*@
+	@*<h3> <em>Thank you for your support of Park Token! </em></h3>
+		<p > Please fill out your information here, after completion you will be taken to a payment processor(like paypal) where you will enter your payment information</p>
+		</section>
+		<div>
+		<div>
+		@using (Html.BeginForm(FormMethod.Post, "Home"))
+		{
+		<div class="mb-2" >
+		<div>First and Last name here</div>
+		@Html.TextBoxFor(n => n.Name)
+		</div>
+		<div class="mb-2" >
+		<div>Email</div>
+		@Html.TextBoxFor(n => n.Email)
+		</div>
+		<div class="mb-2" >
+		<div>Currency of your payment</div>
+		@Html.TextBoxFor(n => n.Currency)
+		</div>
+		<div class="mb-2" >
+		<div>Amount</div>
+		@Html.TextBoxFor(n => n.Amount)
+		</div>
+		<div class="mb-2" >
+		<div>WalletAddress</div>
+		@Html.TextBoxFor(n => n.WalletAddress)
+		</div>
+
+		<div>
+		<input class="col-md-12 text-center" type="submit" value="Submit" />
+		</div>
+		}
+		</div>
+		</div>
+		</div>*@
+
+
+	@*   <div class="col-md-10 col-lg-8">
+		<form action="" method="post" class="contact-form m-0">
+		<div class="row">
+		<div class="col-md-6 mb-3">
+		<input type="text" name="email" class="form-control" placeholder="Email">
+		</div>
+		<div class="col-md-6 mb-3">
+		<input type="text" name="" class="form-control" placeholder="Name">
+		</div>
+		<div class="col-md-12 mb-3">
+		<textarea name="" id="" cols="20" rows="5" class="form-control" placeholder="Message"></textarea>
+		</div>
+		<div class="col-md-12 text-center">
+		<input type="submit" value="Submit">
+		</div>
+		</div>
+		</form>
+	*@
+
+	<div class="container">
+		<section class="main-page mt-5 text-center">
+			<h3> <em>Thank you for your support of Park Token! </em></h3>
+			<p> Please fill out your information here, after completion you will be taken to a payment processor (like PayPal) where you will enter your payment information</p>
+			<hr />
+			<div>
+				@using (Html.BeginForm(FormMethod.Post, "Home"))
+				{
+					<div class="container justify-content center">
+						<div class="mb-3 mr-auto ml-auto" style="width:300px">
+							<div>First Name</div>
+							@Html.TextBoxFor(n => n.FirstName, new { @class = "form-control"})
+						</div>
+						<div class="mb-3 ml-auto mr-auto" style="width:300px">
+							<div>Last Name</div>
+							@Html.TextBoxFor(n => n.LastName, new { @class = "form-control"})
+						</div>
+						<div class="mb-3 ml-auto mr-auto" style="width:300px">
+							<div>Email</div>
+							@Html.TextBoxFor(n => n.Email, new { @class = "form-control"})
+						</div>
+						<div class="mb-3 ml-auto mr-auto" style="width:300px">
+							<div>Currency of your payment</div>
+							@Html.TextBoxFor(n => n.Currency, new { @class = "form-control"})
+						</div>
+						<div class="mb-3 ml-auto mr-auto" style="width:300px">
+							<div>Amount</div>
+							@Html.TextBoxFor(n => n.Amount, new { @class = "form-control"})
+						</div>
+						<div class="mb-5 ml-auto mr-auto" style="width:300px">
+							<div>WalletAddress</div>
+							@Html.TextBoxFor(n => n.WalletAddress, new { @class = "form-control"})
+						</div>
+
+						<div class="checkout-form">
+							<input type="submit" value="Submit" />
+						</div>
+					</div>
+
+
+				}
+			</div>
+
+		</section>
+</body>
+</html>

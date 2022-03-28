@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Park Token</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Park Token</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;400;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+    @*    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - MoonBase MarketingSite</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+
+</head>
+<!--            <li><a class="nav-link scrollto active online"  asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+          <li><a class="nav-link scrollto " asp-area="" asp-controller="Home" asp-action="Whitepaper">Whitepaper</a></li>
+          <li><a class="nav-link scrollto" href="#team">Works</a></li>   -->
+<body>
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="logo"><img src="assets/img/park-token.svg" alt="" class="img-fluid"></a>
+                <div class="" style="display: flex;align-items: center">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav" id="navbar">
+                            <li><a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a class="nav-link scrollto" href="#howtobuy">Buy</a></li>
+                            <li><a class="nav-link scrollto" href="#mission">Mission</a></li>
+                            <li><a class="nav-link scrollto " href="#tokenomics">Tokenomics</a></li>
+                            <li><a class="nav-link scrollto" href="#dogpark">Dog Park</a></li>
+                            <li><a class="nav-link scrollto" href="#cta">Whitepaper</a></li>
+                            <li><a class="nav-link scrollto" href="#roadmap">Roadmap</a></li>
+                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                            <!-- <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div id="BuyPark" class="toggler-btn">
+                        <a class="btn-green getstarted align-items-center" asp-area="" asp-controller="Home" asp-action="PreOrderCheckout"><span>Buy $PARK</span> <span>PrePurchase Here</span></a>
+                        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    @* <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MoonBase.MarketingSiteManager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </nav>
+        </header>*@
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="contact">
+        <div class="footer-bg">
+            <div class="fp-2">
+                <img src="assets/img/green-galaxy.svg" alt="">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="section-title-2" data-aos="fade-up">
+                            <h2>Contact</h2>
+                            <p>
+                                Have questions or looking to collaborate?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-lg-8">
+                        <form action="mailto:admin@parktoken.com" method="post" enctype=”multipart/form-data” class="contact-form m-0" name="EmailForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" name="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" name="" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <textarea name="" id="" cols="20" rows="5" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <div class="container pt-4 pt-xxl-5 pb-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="social-links mb-3 mb-xl-4">
+                    <a href="https://twitter.com/theparktoken" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://discord.com/invite/kSYYGh6KU2" target="_blank" class="twitter"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.reddit.com/r/ParkTokenOfficial/" target="_blank" class="twitter"><i class="fa-brands fa-reddit-alien"></i></a>
+
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>ParkToken</span></strong>. All Rights Reserved
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </footer>
+
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/blockchainconnect.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    @*@await RenderSectionAsync("Scripts", required: false)*@
+</body>
+</html>

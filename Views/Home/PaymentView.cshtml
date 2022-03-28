@@ -1,0 +1,38 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    @using (Html.BeginForm(FormMethod.Post, "Home"))
+    {
+        <div class="s1">
+            <div>Full Name</div>
+            @Html.TextBox("FullName", new { @class = "searchTxt" })
+
+        </div>
+        <div class="s1">
+            <div>Email</div>
+            @Html.TextBox("Email", new { @class = "searchTxt" })
+        </div>
+        <div class="s1">
+            <div>Contact Numbers</div>
+            @Html.TextBox("Currency", new { @class = "Currency"})
+        </div>
+        <div class="s1">
+            <div>Email</div>
+            @Html.TextBox("Amount", new { @class = "Amount" })
+        </div>
+        <div class="s1">
+            <div>Email</div>
+            @Html.TextBox("WalletAddress", new { @class = "WalletAddress" })
+        </div>
+
+        <div>
+            <input type="submit" value="PaymentModel" />
+        </div>
+    }
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+	<section id="hero" class="d-flex align-items-center h-100">
+		<div class="hero-bg"></div>
+		<div class="top-galaxy-fly-2">
+			<img src="assets/img/blue-galaxy.svg" class="img-fluid" alt="">
+		</div>
+		<div class="container mt-5 h-100">
+			<div class="row">
+					@using (Html.BeginForm("AirDrop", "Home", FormMethod.Post))
+					{
+				<div class="col-lg-5 mx-auto">
+								 I affirm that I am not a United States resident or that I am a United States resident and meet the requirements of an accredited investor as outlined here.
+						 (https://www.sec.gov/capitalraising/building-blocks/accredited-investor) 
+				</div>
+						<div class="col-lg-5 mx-auto">
+								@Html.CheckBox("checkResp", false)
+					  <div class="checkout-form">
+							<input type="submit" value="Submit" />
+						</div>
+				</div>
+	
+					}
+
+		
+			</div>
+
+		</div>
+	</section>
+
+	<script type="text/javascript" src="https://widget.gleamjs.io/e.js" async="true"></script>
+
+
+</body>
+</html>

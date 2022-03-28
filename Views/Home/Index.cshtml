@@ -1,0 +1,440 @@
+﻿@{
+  ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+@* <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/all.min.js"></script>*@
+  <!-- ======= Header ======= -->
+@*  <header id="header" class="fixed-top">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">              
+         <a href="#hero" class="logo"><img src="assets/img/park-token.svg" alt="" class="img-fluid"></a>
+      <div class="" style="display: flex;align-items: center">        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav" id="navbar">
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#howtobuy">Buy</a></li>
+              <li><a class="nav-link scrollto" href="#mission">Mission</a></li>
+              <li><a class="nav-link scrollto " href="#tokenomics">Tokenomics</a></li>
+              <li><a class="nav-link scrollto" href="#dogpark">Dog Park</a></li>         
+              <li><a class="nav-link scrollto" href="#cta">Whitepaper</a></li>
+              <li><a class="nav-link scrollto" href="#roadmap">Roadmap</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+          <div class="toggler-btn">
+            <a class="getstarted scrollto" href="javascript:void(0)"><span>Buy $PARK</span> <span>Coming soon</span></a>
+            <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>        
+      </div>      
+    </div>
+  </nav>
+</header>
+*@
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="hero-bg"></div>
+    <div class="top-galaxy-fly-2">
+      <img src="assets/img/blue-galaxy.svg" class="img-fluid" alt="">
+    </div>
+
+    <div class="container pt-5 pt-md-0 pb-5 pb-md-0 mt-5">
+      <div class="row">
+        <div class="col-xl-6 col-lg-7 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 class="mb-3">Where Crypto Dogs Play</h1>
+          <p class="banner-text w-75 ptext-justify">
+            Welcome to $PARK token, a community driven platform that gives steady returns and allows anyone to reach the moon. $PARK token works as a stand alone investment that offers reflections and amazing growth potential–it also enables entire crypto dog communities to gain rewards like never before when used in the Dog Park Dapp.
+          </p>
+          <div class="mt-3">            
+            <a href="https://discord.com/invite/kSYYGh6KU2" target="_blank" class="btn-get-quote">Join our Discord</a>
+            <a class="btn-green ms-0 ms-sm-2" id="whitepaperLink" asp-area="" asp-controller="Home" asp-action="Whitepaper">Read the Whitepaper</a>
+          </div>
+          <div class="mt-2">
+              <a class="btn-get-quote" asp-controller="Home" asp-action="CountryCheck">Participate in the AirDrop</a>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-5 order-1 order-lg-2 hero-img text-center mt-2 mt-xl-2 pt-3 pt-xl-2 position-relative mb-4 mb-lg-0 d-none d-sm-block">         
+          <img src="assets/img/dogpark-banner.svg" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Hero -->
+
+  <main id="main" class="main-page">
+    <!-- ======= Mission Section ======= -->
+    <section id="howtobuy" class="how-to-buy">
+      <div class="container">
+        <div class="section-title pb-0" data-aos="fade-up">
+          <h2>How to buy</h2>
+          <p>Follow the steps below to purchase $PARK token</p>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="icon-box rotated-arrow">
+              <a href="https://support.binance.us/hc/en-us/articles/4423865255319-Configuring-MetaMask-with-Binance-Smart-Chain" target="_blank">
+                <div class="pb-3 pb-lg-4">
+                  <img src="assets/img/metamask.svg" alt="" class="img-fluid">  
+                </div>              
+                <h2>Create a Metamask wallet</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box rotated-arrow">
+              <a href="https://www.binance.com/en/buy-BNB" target="_blank">
+                <div class="pb-3 pb-lg-4">
+                  <img src="assets/img/bnb.svg" alt="" class="img-fluid">
+                </div>
+                <h2>Buy BNB</h2>
+              </a>
+            </div>            
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box rotated-arrow">
+              <a href="https://crypto-explained.com/services/send-bnb-coin-to-binance-smart-chain-on-metamask/" target="_blank">
+                <div class="pb-3 pb-lg-4">
+                  <img src="assets/img/bnb-to-metamask.svg" alt="" class="img-fluid">
+                </div>
+                <h2>Transfer BNB to Metamask</h2>
+              </a>
+            </div>            
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box">
+              <a href="javascript:void(0)">
+                <div class="pb-3 pb-lg-4">
+                  <img src="assets/img/pancakeswap.svg" alt="" class="img-fluid">
+                </div>
+                <h2>Buy from Pancakeswap</h2>
+              </a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Mission Section ======= -->
+    <section id="mission" class="mission mt-4 mt-xxl-5">
+      <div class="mission-bg"></div>
+      <div class="container pt-4 pt-xxl-5 pb-4 pb-xxl-5">
+        <div class="row">
+          <div class="content col-lg-6 col-xl-6 d-flex flex-column justify-content-center mb-4">
+            <img src="assets/img/featured-pic.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 col-xl-6 mb-0 mb-md-4">            
+            <div class="section-title-3 text-start">
+              <h2>Mission</h2>
+              <p class="mb-3">
+                <strong>Become the number one recommended investment experience for dog token communities.</strong>
+              </p>
+              <p class="mb-3 ptext-justify">
+                In the last few years we’ve been introduced to a new type of token that has set the precedent for community growth, energy, and action: dog tokens. While many of these tokens begin as memes, we’ve seen them quickly establish themselves as communities that bring real utility to the crypto world.    
+              </p>              
+              <p class="mb-3 ptext-justify">
+                However, all dog tokens share one thing in common: they all want to go to the moon. $PARK allows any dog community to reach the moon far faster than normal. When combined with the power of prize-linked staking in Dog Park, users will see millions given away to individual users, as well as entire communities boosted by burns. After all, a rising tide lifts all boats.
+              </p>
+            </div>            
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Features Section ======= -->
+
+
+    <!-- ======= Tokenomics Section ======= -->
+    <section id="tokenomics" class="top-boxes mb-5 pb-5">
+      <div class="container">
+
+        <div class="section-title pb-3 pb-sm-3 mb-0 mb-sm-3" data-aos="fade-up">
+          <h2>Tokenomics</h2>
+          <!-- <p>Here are a few reasons why you should choose Park Token</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="p-4">
+                <div class="position-relative tb-icons">
+                  <img src="assets/img/Passive-Reflections.svg" alt="" class="img-fluid colored-icon">  
+                  <!-- <img src="assets/img/Passive-Reflections-white.svg" alt="" class="img-fluid white-icon">   -->
+                </div>                
+              </div>              
+              <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
+              <h4 class="title">Passive Reflections</h4>
+              <p class="description">4% of every transaction with $PARK is redistributed to holders. This means that just by holding $PARK you’ll see your tokens increase each day.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-3">            
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="p-4">
+                <div class="position-relative tb-icons">
+                  <img src="assets/img/Operational-Support.svg" alt="" class="img-fluid colored-icon">
+                  <!-- <img src="assets/img/Operational-Support-white.svg" alt="" class="img-fluid white-icon"> -->
+                </div>
+              </div>
+              <!-- <div class="icon"><i class="bx bx-file"></i></div> -->
+              <h4 class="title">Operational Support</h4>
+              <p class="description">3% of every transaction with $PARK is redistributed to the developer wallet. This is used for marketing, growth, and supporting our engineers. Every 6 months this tax reduces by 0.5% until it reaches 1%.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="p-4">
+                <div class="position-relative tb-icons">
+                  <img src="assets/img/Liquidity-Boost.svg" alt="" class="img-fluid colored-icon">
+                  <!-- <img src="assets/img/Liquidity-Boost-white.svg" alt="" class="img-fluid white-icon"> -->
+                </div>
+              </div>
+              <!-- <div class="icon"><i class="bx bx-tachometer"></i></div> -->
+              <h4 class="title">Liquidity Boost</h4>
+              <p class="description">An additional 2% of every transaction is used to bolster the liquidity pool and decrease volatility.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="p-4">
+                <div class="position-relative tb-icons">
+                  <img src="assets/img/Anti-Whale.svg" alt="" class="img-fluid colored-icon">
+                  <!-- <img src="assets/img/Anti-Whale-white.svg" alt="" class="img-fluid white-icon"> -->
+                </div>
+              </div>
+              <!-- <div class="icon"><i class="bx bx-tachometer"></i></div> -->
+              <h4 class="title">Anti-Whale</h4>
+              <p class="description">All transactions are limited to 0.1% of the total supply. This prevents big wallet holders from price manipulation.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End TopBoxes Section ======= -->
+
+    <!-- ======= Dog Park Section ======= -->
+
+    <section id="dogpark" class="dogpark">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="section-title-3 text-start">
+              <h2>Dog Park</h2>
+              <p class="mb-3 blck-text me-4 me-xxl-5">
+                <strong>Dog Park is already under development. It’s the Dapp that gives $PARK and dog communities a major boost in power.</strong>
+              </p>
+              <p class="mb-3 blck-text ptext-justify me-0 me-lg-4 me-xxl-5">
+                Dog Park introduces prize-linked staking (PLS). This allows users to stake tokens for the chance to win some serious cash. Each week, everyone staking tokens in Dog Park is eligible to win a prize–and this remains true as long as you’re staked in Dog Park! Check out these other benefits of using Dog Park.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="row gx-3">
+              <div class="col-md-6 mb-3">
+                <div class="dp-box dpb-1" style="">
+                  <div class="dpb-icon-p">
+                    P
+                  </div>
+                  <h4>Prize Winner</h4>
+                  <p>As long as you’re staked in Dog Park, you have a weekly chance to win big money.</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="dp-box dpb-2" style="">                  
+                  <div class="dpb-icon-a">
+                    A
+                  </div>
+                  <h4>Assist in token burns</h4>
+                  <p>Each week we burn the token of your choice at no cost to you, enabling you to support your community.</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="dp-box dpb-3" style="">                  
+                  <div class="dpb-icon-r">
+                    R
+                  </div>                  
+                  <p>Staking tokens guarantees weekly rewards in BUSD.</p>
+                  <h4>Receive stable rewards</h4>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="dp-box dpb-4" style="">                  
+                  <div class="dpb-icon-k">
+                    K
+                  </div>                  
+                  <p>You can always access your staked tokens.</p>
+                  <h4>Keep your investment</h4>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <!-- ======= End Dog Park Section ======= -->
+
+    <!-- ======= CTA Section ======= -->
+
+    <section id="cta" class="cta">      
+      <div class="container" data-aos="zoom-out">          
+        <div class="abc">
+          <div class="cta-bg">
+            <div class="row g-5">
+              <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+                <h3> White <em>Paper</em></h3>
+                <p> Read the whitepaper to learn more about $PARK and Dog Park</p>
+                <a class="cta-btn align-self-start" asp-area="" asp-controller="Home" asp-action="Whitepaper">Download the whitepaper</a>
+              </div>
+              <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+                <div class="img">
+                  <img src="assets/img/cta.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>       
+      </div>
+    </section>
+    <!-- ======= End CTA Section ======= -->    
+
+
+    <!-- ======= Roadmap Section ======= -->
+
+    <section id="roadmap" class="roadmap pb-0">
+      <div class="container">
+        <div class="section-title mb-0 pb-0" data-aos="fade-up">
+          <h2 class="mb-0">Roadmap</h2>
+          <!-- <p>Here are a few reasons why you should choose Park Token</p> -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main-timeline">
+              <!-- start experience section-->
+              <div class="timeline">
+                  <div class="icon"></div>
+                  <div class="phase-content">
+                      <div class="phase-outer">
+                          <span class="phase-circle">
+                                  <span class="phase-text">Phase</span>
+                          <span class="year">1</span>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="timeline-content jc-start">                      
+                      <ul class="left-list">                        
+                        <li>Whitepaper Release</li>
+                        <li>Presale</li>
+                        <li>1000+ Holders</li>
+                        <li>2000+ Discord Members</li>
+                        <li>Audit Smart Contracts</li>
+                        <li>Initial Dex Offering (IDO)</li>
+                      </ul>                      
+                  </div>
+              </div>
+              <!-- end experience section-->
+
+              <!-- start experience section-->
+              <div class="timeline reverse">
+                  <div class="icon"></div>
+                  
+                  <div class="timeline-content jc-end">                      
+                      <ul class="right-list">                        
+                        <li>6000+ Holders</li>
+                        <li>Marketing Campaign (Influencer marketing)</li>
+                        <li>10,000+ Discord Members</li>
+                        <li>Coingecko Listing</li>
+                        <li>Coinmarketcap Listing</li>
+                        <li>Listing on Small Exchanges</li>
+                      </ul>
+
+                  </div>
+                  <div class="phase-content">
+                      <div class="phase-outer">
+                          <span class="phase-circle">
+                                  <span class="phase-text">Phase</span>
+                          <span class="year">2</span>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <!-- end experience section-->
+
+              <!-- start experience section-->
+              <div class="timeline">
+                  <div class="icon"></div>
+                  <div class="phase-content">
+                      <div class="phase-outer">
+                          <span class="phase-circle">
+                                  <span class="phase-text">Phase</span>
+                          <span class="year">3</span>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="timeline-content jc-start">                      
+                      <ul class="left-list">                        
+                        <li>80,000+ Holders</li>
+                        <li>Launch Dog Park</li>
+                        <li>Dog Park Smart Contracts Audit</li>
+                        <li>Give away $50,000 in weekly rewards</li>
+                        <li>Prepare for major exchange listings</li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- end experience section-->
+
+              <!-- start experience section-->
+              <div class="timeline reverse">
+                  <div class="icon"></div>
+                  <div class="timeline-content jc-end">                      
+                      <ul class="right-list">                        
+                        <li>200,000+ Holders</li>
+                        <li>Give away $150,000 in weekly rewards</li>
+                        <li>Begin development of the next major Park project</li>
+                      </ul>
+                  </div>
+                  <div class="phase-content">
+                      <div class="phase-outer">
+                          <span class="phase-circle">
+                                  <span class="phase-text">Phase</span>
+                          <span class="year">4</span>
+                          </span>
+                      </div>
+                  </div>
+                  
+              </div>
+              <!-- end experience section-->
+            </div>            
+          </div>          
+        </div>
+      </div>
+    </section>
+    <!-- ======= End Roadmap Section ======= -->
+  </main>
+  <!-- End #main -->
+
+</body>
+
+</html>

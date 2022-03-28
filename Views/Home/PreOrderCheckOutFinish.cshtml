@@ -1,0 +1,142 @@
+﻿@model MoonBase.MarketingSiteManager.Models.PaymentModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<meta name="viewport" content="width=device-width" />*@
+    <title>CheckOutFinish</title>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+
+</head>
+<body>
+    @* <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />*@ <!-- Optimal Internet Explorer compatibility -->
+
+    <section id="hero" class="d-flex align-items-center">
+        <div class="hero-bg"></div>
+        <div class="top-galaxy-fly-2">
+            <img src="assets/img/blue-galaxy.svg" class="img-fluid" alt="">
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="card p-3">
+                    <div class="card-title section-title mb-0">
+                        <h2>Paypal Checkout</h2>
+                    </div>
+                    <div class="card-body text-center text-dark">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="4VH2K37EVZQYL">
+                            <table>
+                                <tr><td><input type="hidden" name="on0" value="Value">Amount</td></tr>
+                                <tr class="dropdown">
+                                    <td>
+                                        <select name="os0" class="btn dropdown-toggle mb-3 border-dark">
+                                            <option value="Option 1">$100.00 USD</option>
+                                            <option value="Option 2">$500.00 USD</option>
+                                            <option value="Option 3">$1,000.00 USD</option>
+                                            <option value="Option 4">$3,000.00 USD</option>
+                                            <option value="Option 5">$5,000.00 USD</option>
+                                            <option value="Option 6">$10,000.00 USD</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td><input type="hidden" name="on1" value="BNB Address">BNB Address</td></tr>
+                                <tr><td><input class="form-control border-dark mb-3" type="text" name="os1" maxlength="200"></td></tr>
+                            </table>
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input class="mx-auto" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    @*
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ZJENFMJD53W44">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="4VH2K37EVZQYL">
+        <table>
+        <tr><td><input type="hidden" name="on0" value="Value">Amount</td></tr>
+        <tr class="dropdown">
+        <td>
+        <select name="os0" class="btn dropdown-toggle mb-3 border-dark">
+        <option value="Option 1">$100.00 USD</option>
+        <option value="Option 2">$500.00 USD</option>
+        <option value="Option 3">$1,000.00 USD</option>
+        <option value="Option 4">$3,000.00 USD</option>
+        <option value="Option 5">$5,000.00 USD</option>
+        <option value="Option 6">$10,000.00 USD</option>
+        </select>
+        </td>
+        </tr>
+        <tr><td><input type="hidden" name="on1" value="BNB Address">BNB Address</td></tr>
+        <tr><td><input class="form-control border-dark mb-3" type="text" name="os1" maxlength="200"></td></tr>
+        </table>
+        <input type="hidden" name="currency_code" value="USD">
+        <input class="mx-auto" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+        </form>
+
+
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+        function initPayPalButton() {
+        paypal.Buttons({
+        style: {
+        shape: 'pill',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'buynow',
+
+        },
+
+        createOrder: function(data, actions) {
+        return actions.order.create({
+        purchase_units: [{"description":"PreOrder $Park Token","amount":{"currency_code":"USD","value":1}}]
+        });
+        },
+
+        onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+
+        // Full available details
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+        // Show a success message within this page, e.g.
+        const element = document.getElementById('paypal-button-container');
+        element.innerHTML = '';
+        element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+        // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+        },
+
+        onError: function(err) {
+        console.log(err);
+        }
+        }).render('#paypal-button-container');
+        }
+        initPayPalButton();
+        </script>*@
+</body>
+</html>

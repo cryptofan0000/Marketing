@@ -1,0 +1,89 @@
+﻿@model MoonBase.MarketingSiteManager.PayPalPurchaseVM
+
+<!DOCTYPE html>
+<html>
+<body>
+    <section id="hero" class="d-flex align-items-center h-100">
+        <div class="hero-bg"></div>
+        <div class="top-galaxy-fly-2">
+            <img src="assets/img/blue-galaxy.svg" class="img-fluid" alt="">
+        </div>
+        <div class="container d-flex justify-content-center mt-5">
+            <section class="main-page text-center align-content-center w-75">
+                <div class="section-title">
+                    <h4>Park Pre-Purchase Portal</h4>
+                </div>
+                <p class="banner-text">
+                    PARK can be pre-purchased at a price of $0.00375 USD per token. This is 25% discounted from its launch price ($0.005). Any pre-purchase tokens will be distributed to the users crypto wallet address on the following schedule: 6% at the time of launch (token generation event) and an additional 6% each quarter until fully vested.
+                </p>
+                <hr />
+                <div class="section-title mt-2">
+                    <h2>How to buy</h2>
+                </div>
+                <p class="banner-text">
+                    If you haven't read the Whitepaper you can read that here: <br /> <a class="btn-green mt-2 ms-0 ms-sm-2" id="whitepaperLink" asp-area="" asp-controller="Home" asp-action="Whitepaper">Read the Whitepaper</a>
+                </p>
+                <div class="section-title mt-2">
+                    <h2>Setting up Metamask and BSC:</h2>
+                </div>
+
+                <p class="banner-text">
+                    If you haven't set-up Metamask and a BNB wallet address please refer to this site <a href="https://support.binance.us/hc/en-us/articles/4423865255319-Configuring-MetaMask-with-Binance-Smart-Chain" tarket="_blank">Configuring Metamask with Binance Smart Chain</a>
+                </p>
+            </section>
+        </div>
+    </section>
+
+    <section id="roadmap" class="roadmap p-5">
+        <main id="main" class="main-page">
+            <div class="container">
+                <div id="FormSection">
+                    <div class="section-title">
+                        <h2>Pre-Purchase form</h2>
+                    </div>
+                    <p class="text-center">Please fill out this form and you will be connected via Metamask</p>
+
+
+                    <form id="prepurchaseform" name="Park-Presale-Form" class="col-lg-4 mx-auto">
+                        <input class="form-control mb-2" id="FirstName" name="FirstName" type="text" placeholder="First Name" required>
+                        <input class="form-control mb-2" id="LastName" name="LastName" type="text" placeholder="Last Name" required>
+                        <input class="form-control mb-2" id="Email" name="Email" type="email" placeholder="Email" required>
+                        <input class="form-control mb-2" id="Amount" name="BUSDAmount" type="number" placeholder="BUSD Amount" required>
+                        <button type="submit" class="btn-green">Send</button>
+                    </form>
+                </div>
+                <div id="FormSuccess" style="display:none">
+                    <div class="section-title">
+                        <h2>Your Pre-Purchase was successful</h2>
+                        <i class="fa-solid fa-check fa-6x" style="color:#0dd6af;"></i>
+                        <p>You will be receiving <span id="ParkRecieving"></span> $PARK</p>
+                    </div>
+
+                    <script>
+                        //This pushes the data from the form into sheets
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbwqe69WPb5i3f0S2xdr3jOJ7lRvmNiTIAeyM3q3JD6kR4wGu8p6gRuDSRsjf1uZb2ms/exec'
+                        const form = document.forms['Park-Presale-Form']
+
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => ShowSuccess(), console.log('Success!'))
+                            .catch(error => console.error('Error!', error.message))
+                        })
+
+                        function ShowSuccess() {
+                          var ParkAmount = 0.00375 * document.getElementById("Amount").value; //this isn't working right
+                          console.log("fully filled");
+                          document.getElementById("FormSection").style.display = "none";
+                          document.getElementById("FormSuccess").style.display = "block";
+                          document.getElementById("ParkRecieving").innerHTML = ParkAmount;
+                        }
+                    </script>
+                </div>
+        </main>
+    </section>
+
+
+</body>
+</html>
+@**@

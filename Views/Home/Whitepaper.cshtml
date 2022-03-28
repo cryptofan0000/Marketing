@@ -1,0 +1,48 @@
+﻿@*
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	@*    <div class="main-page mt-5 hero-bg">
+		<div class="container">
+		@using (Html.BeginForm("ViewPDF", "Home", FormMethod.Post))
+		{
+		<a href="javascript:;" onclick="document.forms[0].submit();" >View PDF</a>
+		<hr/>
+		@Html.Raw(TempData["Embed"])
+		}
+		</div>
+
+		</div>*@
+
+
+	<div id="hero" style="height: 100vh">
+		<div class="hero-bg"></div>
+		<div class="top-galaxy-fly-2">
+			<img src="assets/img/blue-galaxy.svg" class="img-fluid" alt="">
+		</div>
+	<section class="mt-5">
+			<div class="container">
+				@using (Html.BeginForm("ViewPDF", "Home", FormMethod.Post))
+				{
+					@*<a href="javascript:;" onclick="document.forms[0].submit();">View PDF</a>*@
+					@Html.Raw(TempData["Embed"])
+				}
+
+				@*This is for mobile*@
+				@*<a href="~/PdfViewer/park_token_whitepaper_v1.0.pdf" target=_blank>Click me</a>*@
+			</div>
+		</section>
+	</div> 
+	
+
+
+
+</body>
+
+</html>
